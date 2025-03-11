@@ -30,7 +30,7 @@ contract Lock {
         emit Withdrawal(address(this).balance, block.timestamp);
 
       (bool success, ) = owner.call{value: address(this).balance}("");
-require(success, "Transfer failed");
+       require(success, "Transfer failed");
 
     }
 }
